@@ -115,7 +115,6 @@ app.get('/goodbye', async (req, res) => {
         ctx.font = '18px Play-Bold';
         ctx.fillText(fbid, 400, 180);
         ctx.font = '23px Play-Bold';
-        ctx.fillText(`GOODBYE`, 310, 70);
 
         const imageBuffer = canvas.toBuffer();
         const pathImg = path.join(__dirname, "cache/goodbye.gif");
