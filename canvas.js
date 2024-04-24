@@ -36,9 +36,7 @@ app.get('/welcome', async (req, res) => {
 
         const background = await loadImage(bg);
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-
-        const avatarUrl = `https://graph.facebook.com/100088806220727/picture?width=720&height=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
-        const avatar = await loadImage(avatarUrl);
+         const avatar = await loadImage(fbid);
         ctx.save();
         ctx.beginPath();
         ctx.arc(165, 150, 50, 0, Math.PI * 2);
@@ -94,8 +92,7 @@ app.get('/goodbye', async (req, res) => {
         const background = await loadImage(bg);
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-        const avatarUrl = `https://graph.facebook.com/100088806220727/picture?width=720&height=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
-        const avatar = await loadImage(avatarUrl);
+        const avatar = await loadImage(fbid);
         ctx.save();
         ctx.beginPath();
         ctx.arc(165, 150, 50, 0, Math.PI * 2);
